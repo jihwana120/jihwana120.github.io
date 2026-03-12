@@ -1,9 +1,8 @@
-/* --- 회원가입 본문 전용 스타일 (.signup_wrapper 기반 변수) --- */
 .signup_wrapper {
     --point: #333;
     --gray: #888;
     background-color: #f8f9fa;
-    padding: 150px 0 100px; /* 헤더 공간 */
+    padding: 150px 0 100px;
     font-family: 'S-CoreDream', sans-serif;
     display: flex;
     justify-content: center;
@@ -23,7 +22,6 @@
     width: 100%; padding: 13px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px;
 }
 
-/* 실시간 유효성 시각화 (JS 미사용) */
 .form_section input:focus { outline: none; border-color: var(--point); }
 .form_section input:not(:placeholder-shown):invalid { border-color: #ff4b4b; }
 
@@ -47,7 +45,6 @@
 .login_link { text-align: center; margin-top: 25px; font-size: 14px; color: var(--gray); }
 .login_link a { color: var(--point); font-weight: bold; }
 
-/* 푸터 스타일 */
 #ft { background: #333; color: #fff; padding: 60px 0 40px; }
 .info_footer { max-width: 1400px; margin: 0 auto; display: flex; padding: 0 40px; gap: 40px; margin-bottom: 30px; }
 .f_logo img { height: 40px; filter: brightness(0) invert(1); }
@@ -56,10 +53,6 @@
 #fnb { max-width: 1400px; margin: 0 auto; padding: 20px 40px; border-top: 1px solid #444; display: flex; gap: 30px; }
 #fnb a { color: #aaa; font-size: 13px; }
 .copyright { text-align: center; font-size: 12px; color: #666; margin-top: 30px; }
-
-/* ------------------------------------------------ */
-/* [통합] 중복확인 & 인증요청 로직 (JS 미사용) */
-/* ------------------------------------------------ */
 
 .hidden_check { display: none; }
 
@@ -87,19 +80,16 @@
     border-top: 5px solid #ff4d8d;
 }
 
-/* 1. 이메일 로직: .com까지 완벽할 때만 */
 #email:valid ~ .hidden_check:checked ~ .custom_alert {
     display: block;
     animation: alertPop 0.3s ease-out;
 }
 
-/* 2. 휴대폰 로직: 010-0000-0000 형식이 완벽할 때만 */
 #phone:valid ~ #phone_check_trigger:checked ~ .phone_alert {
     display: block;
     animation: alertPop 0.3s ease-out;
 }
 
-/* 형식이 틀리면 체크되어도 숨김 */
 #email:invalid ~ .hidden_check:checked ~ .custom_alert,
 #phone:invalid ~ #phone_check_trigger:checked ~ .phone_alert {
     display: none;

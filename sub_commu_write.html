@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>부산문화관광</title>
+    <title>커뮤니티 - Community</title>
     <link rel="stylesheet" href="css/sub/font.css">
     <link rel="stylesheet" href="css/sub/chapter.css">
     <link rel="stylesheet" href="css/sub/footer.css">
-    <link rel="stylesheet" href="css/sub/sub_commu/sub_commu_content_read.css">
+    <link rel="stylesheet" href="css/sub/sub_commu/sub_commu_ch01.css">
+    <link rel="stylesheet" href="css/sub/sub_commu/sub_commu_write.css">
+    <style>
+        .form_row { margin-bottom: 16px; }
+        .form_row label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+        .form_input { width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
+        .form_textarea { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; resize: vertical; box-sizing: border-box; }
+        .form_btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .btn_cancel { padding: 8px 20px; background: #888; color: white; border-radius: 4px; text-decoration: none; font-size: 14px; }
+        .btn_write { padding: 8px 20px; background: #1a56a0; color: white; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; }
+    </style>
 </head>
-<body class="ch01"> 
+<body class="ch01">
     <header id="hd">
         <div class="hd_container">
             <a href="./index.html" class="logo">
@@ -70,114 +80,85 @@
 
     <section class="sub_visual">
         <h2>커뮤니티</h2>
-        <p>자유게시판</p>
+        <p>글쓰기</p>
     </section>
-    <div class="contain_wrap">
 
-    </div>
     <div class="content_wrap">
         <div class="main_container">
             <aside class="lnb">
                 <h2 class="lnb_tit">커뮤니티</h2>
                 <ul>
                     <li class="on"><a href="sub_commu_1.html">자유게시판</a></li>
-                    <li><a href="sub_commu_2.html">Q&A</a></li>
+                    <li><a href="sub_commu_2.html">Q&amp;A</a></li>
                     <li><a href="sub_commu_3.html">관광불편신고</a></li>
                 </ul>
             </aside>
 
-            <section class="write_content">
+            <section class="board_content">
+                <h3 class="board_title">자유게시판 글쓰기</h3>
 
-  <h3 class="write_title">자유게시판</h3>
+                <form action="/community/write" method="post" class="write_form">
+                    <input type="hidden" name="boardType" value="FREE">
 
-  <div class="write_form">
+                    <div class="form_row">
+                        <label for="title">제목</label>
+                        <input type="text" id="title" name="title" placeholder="제목을 입력하세요" class="form_input" required>
+                    </div>
 
-    <!-- 제목 -->
-    <div class="write_row">
-      <div class="write_label">제목:</div>
-      <div class="write_input">
-        <input type="text" />
-      </div>
-    </div>
+                    <div class="form_row">
+                        <label for="content">내용</label>
+                        <textarea id="content" name="content" rows="12" placeholder="내용을 입력하세요" class="form_textarea" required></textarea>
+                    </div>
 
-    <!-- 카테고리 -->
-    <div class="write_row">
-      <div class="write_label">카테고리:</div>
-      <div class="write_input">
-        <select>
-          <option>자유게시판</option>
-          <option>사이트후기</option>
-          <option>Q&amp;A</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- 비밀번호 -->
-    <div class="write_row">
-      <div class="write_label">비밀번호:</div>
-      <div class="write_input">
-        <input type="password" />
-      </div>
-    </div>
-
-    <!-- 내용 -->
-    <div class="write_row write_row_content">
-      <div class="write_label">내용:</div>
-      <div class="write_input">
-        <textarea></textarea>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- 하단 버튼 -->
-  <div class="write_actions">
-    <a href="#" class="btn_gray">목록보기</a>
-    <a href="#" class="btn_gray">저장하기</a>
-  </div>
-
-</section>
-            
+                    <div class="form_btns">
+                        <a href="sub_commu_1.html" class="btn_cancel">취소</a>
+                        <button type="submit" class="btn_write">등록하기</button>
+                    </div>
+                </form>
+            </section>
         </div>
-        <footer id="ft">
-            <div class="ft_container">
-                <div class="ft_left">
-                    <div class="f_logo">
-                        <img src="./images/mix_logo_11.png" alt="부산광역시 로고">
-                    </div>
-                    <p class="f_address">
-                        (우 47545) 부산광역시 연제구 중앙대로 1001(연산동)</p>
-                        <div class="f_links">
-                            <a href="#">시청 찾아오시는 길</a>
-                            <a href="#">주차안내</a>
-                            <a href="#">이용안내</a>
-                        </div>
-                    </div>
-                    <div class="ft_center">
-                        <nav class="fnb">
-                            <a href="#">개인정보처리방침</a>
-                            <a href="#">이메일무단수집거부</a>
-                    <a href="#">저작권정책</a>
-                        </nav>
-                        <p class="copyright">
-                            Copyright ⓒ 2026 BUSAN METROPOLITAN CITY. All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="ft_right">
-                        <a href="https://www.instagram.com/busancity">
-                            <img src="./icon/Instagram.png" alt="부산시 공식 인스타그램">
-                            <span>인스타그램</span>
-                        </a>
-                        <a href="https://www.facebook.com/BusanCity">
-                            <img src="./icon/facebook1.png" alt="부산시 공식 페이스북">
-                            <span>페이스북</span>
-                        </a>
-                        <a href="https://www.youtube.com/@Busan_is_good">
-                            <img src="./icon/youtube1.png" alt="부산시 공식 유튜브">
-                            <span>유튜브</span>
-                        </a>
-                    </div>
+    </div>
+
+    <footer id="ft">
+        <div class="ft_container">
+            <div class="ft_left">
+                <div class="f_logo">
+                    <img src="./images/mix_logo_11.png" alt="부산광역시 로고">
                 </div>
-            </footer>
+                <p class="f_address">
+                    (우 47545) 부산광역시 연제구 중앙대로 1001(연산동)
+                </p>
+                <div class="f_links">
+                    <a href="#">시청 찾아오시는 길</a>
+                    <a href="#">주차안내</a>
+                    <a href="#">이용안내</a>
+                </div>
+            </div>
+            <div class="ft_center">
+                <nav class="fnb">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이메일무단수집거부</a>
+                    <a href="#">저작권정책</a>
+                </nav>
+                <p class="copyright">
+                    Copyright ⓒ 2026 BUSAN METROPOLITAN CITY. All Rights Reserved.
+                </p>
+            </div>
+            <div class="ft_right">
+                <a href="https://www.instagram.com/busancity">
+                    <img src="./icon/Instagram.png" alt="부산시 공식 인스타그램">
+                    <span>인스타그램</span>
+                </a>
+                <a href="https://www.facebook.com/BusanCity">
+                    <img src="./icon/facebook1.png" alt="부산시 공식 페이스북">
+                    <span>페이스북</span>
+                </a>
+                <a href="https://www.youtube.com/@Busan_is_good">
+                    <img src="./icon/youtube1.png" alt="부산시 공식 유튜브">
+                    <span>유튜브</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,31 +1,28 @@
-/* 컨텐츠 영역 */
+@charset "utf-8";
+
 .write_content {
-  width: calc(100% - 260px); /* lnb 옆 영역에 맞추는 용도 (기존 방식) */
+  width: calc(100% - 260px);
   float: right;
 }
 
-/* 좌측 상단 타이틀 */
 .write_title {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-/* 입력 폼 전체 */
 .write_form {
   width: 100%;
 }
 
-/* 한 줄(라벨+입력) */
 .write_row {
   display: grid;
-  grid-template-columns: 90px 1fr; /* 라벨 폭 고정 + 입력 가변 */
+  grid-template-columns: 90px 1fr;
   gap: 16px;
   align-items: center;
   margin-bottom: 10px;
 }
 
-/* 라벨 박스 */
 .write_label {
   height: 28px;
   background: #d9d9d9;
@@ -36,7 +33,6 @@
   font-weight: 600;
 }
 
-/* 입력 박스(회색 바) */
 .write_input {
   height: 28px;
   background: #d9d9d9;
@@ -45,7 +41,6 @@
   align-items: center;
 }
 
-/* input/select 공통 */
 .write_input input,
 .write_input select {
   width: 100%;
@@ -56,18 +51,17 @@
   font-size: 13px;
 }
 
-/* 내용 줄은 크게 */
 .write_row_content {
   align-items: start;
 }
 
 .write_row_content .write_label {
-  height: 28px;            /* 라벨은 작게 유지 */
-  margin-top: 8px;         /* 이미지처럼 약간 내려보이게 */
+  height: 28px;
+  margin-top: 8px;
 }
 
 .write_row_content .write_input {
-  height: 240px;           /* 큰 내용 박스 */
+  height: 240px;
   align-items: stretch;
   padding: 10px;
 }
@@ -82,14 +76,12 @@
   font-size: 13px;
 }
 
-/* 하단 버튼: 좌/우 끝 배치 */
 .write_actions {
   margin-top: 18px;
   display: flex;
   justify-content: space-between;
 }
 
-/* 버튼 */
 .btn_gray {
   display: inline-block;
   background: #d9d9d9;

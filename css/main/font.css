@@ -80,7 +80,6 @@
     font-style: normal;
 }
 
-/* 1. 기본 초기화 및 전체 폰트 설정 */
 * {
     margin: 0;
     padding: 0;
@@ -88,16 +87,13 @@
 }
 
 body {
-    /* 기본 폰트를 에스코어 드림으로 설정 (가장 무난하고 깔끔함) */
     font-family: 'S-CoreDream', sans-serif;
     font-weight: 400;
     color: #333;
     line-height: 1.6;
 }
 
-/* 2. 헤더 및 네비게이션 (Gmarket Sans 적용) */
 #hd .logo {
-    /* 로고 텍스트가 있다면 부산체나 GmarketSans 추천 */
     font-family: 'GmarketSans', sans-serif;
     font-weight: 700;
 }
@@ -116,24 +112,20 @@ body {
     font-size: 0.9rem;
 }
 
-/* 3. 메인 콘텐츠 섹션 (부산체 및 강조) */
 .history_sec h2 {
-    /* 섹션 제목은 부산의 느낌을 살려 부산체 적용 */
     font-family: 'BusanFont', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #00462a; /* 부산시 상징색 예시 */
+    color: #00462a;
 }
 
 .text_card p {
-    /* 본문은 가독성이 좋은 에스코어 드림 */
     font-family: 'S-CoreDream', sans-serif;
     font-weight: 400;
     font-size: 1.1rem;
-    word-break: keep-all; /* 한글 줄바꿈 최적화 */
+    word-break: keep-all;
 }
 
-/* 4. 하단 메뉴 및 푸터 */
 .bottom_menu h3 {
     font-family: 'GmarketSans', sans-serif;
     font-weight: 700;
@@ -159,7 +151,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* 5. Sticky Wrapper 보조 (레이아웃 유지용) */
 .sticky_wrapper {
     display: flex;
     gap: 40px;

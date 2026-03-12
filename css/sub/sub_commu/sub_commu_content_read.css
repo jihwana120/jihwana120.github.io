@@ -1,26 +1,21 @@
-/* ===============================
-   게시글 상세 / 작성 페이지
-================================ */
+@charset "utf-8";
 
 .post_content {
     width: calc(100% - 260px);
     float: right;
 }
 
-/* 상단 게시판명 */
 .post_title {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-/* 게시글 박스 */
 .post_box {
     background: #e5e5e5;
     padding: 20px;
 }
 
-/* 제목 */
 .post_subject {
     background: #d3d3d3;
     padding: 15px;
@@ -29,7 +24,6 @@
     margin-bottom: 10px;
 }
 
-/* 작성 정보 */
 .post_info {
     background: #d3d3d3;
     padding: 12px 15px;
@@ -39,7 +33,6 @@
     gap: 30px;
 }
 
-/* 본문 */
 .post_body {
     background: #d3d3d3;
     padding: 20px;
@@ -48,14 +41,12 @@
     line-height: 1.6;
 }
 
-/* 하단 버튼 영역 */
 .post_btns {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-/* 버튼 공통 */
 .btn {
     display: inline-block;
     padding: 8px 20px;
